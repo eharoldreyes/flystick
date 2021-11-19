@@ -19,4 +19,4 @@ print JoyAx
 # Prints the values for axis0
 while True:
         pygame.event.pump()
-        print "axis 0" + js0.get_axis(0) + "axis 1" + js0.get_axis(1)  + "axis 2" + js0.get_axis(2)  + "axis 3" + js0.get_axis(3) 
+        print ("axis 0 " + js0.get_axis(0) + " axis 1 " + js0.get_axis(1)  + " axis 2 " + js0.get_axis(2)  + " axis 3 " + js0.get_axis(3) )
