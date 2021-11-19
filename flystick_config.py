@@ -13,10 +13,12 @@ stick = Joystick(0)
 # (Connect this pin to the RC transmitter trainer port.)
 PPM_OUTPUT_PIN = 18
 
+ail_trim = stick.hat_switch(hat=0, axis=0, positions=41, initial=20)
+
 # Output (PPM) channels.
 CHANNELS = (
     # channel 1: aileron
-    stick.axis(0),
+    stick.axis(0) + ail_trim * 0.5,
     # channel 2: elevator (reversed)
     -stick.axis(1),
     # channel 3: throttle (reversed)
